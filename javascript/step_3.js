@@ -11,11 +11,6 @@ app.use(bodyParser.json());
 
 // Functions
 
-/**
- * This endpoint is called by pokerwars.io to request your bot next move on a tournament.
- * You have the current state of the table in the GameInfo object, which you can use to decide
- * your next move.
- */
 var play = function (req, res) {
   var gameInfo = req.body;
   var nextMove = {
@@ -24,22 +19,12 @@ var play = function (req, res) {
   res.status(200).send(nextMove);
 };
 
-/**
- * This is used by pokerwars.io when your bot subscribes to verify that is alive and responding
- */
 var ping = function (req, res) {
   res.status(200).send({
     pong: true
   });
 };
 
-/**
- * These requests are sent optionally, you decide if you want them when you subscribe. Your
- * poker bot does not need to necessarily provide an API for these, but they can give you
- * useful hints on what is happening during the tournaments. Please do not use notifications
- * in your poker bot logic, as they are not guaranteed to always be sent. They are only
- * informative so you are aware of what your bot is doing.
- */
 var notifications = function (req, res) {
   var notification = req.body;
   console.log('Received notification of type ' + notification.type + ' with message: ', notification.message);

@@ -24,7 +24,10 @@ var play = function (req, res) {
     var gameInfo = req.body;
 
     // Create a nextMove object and send it back with here
-
+    var nextMove = {
+      action: 'fold'
+    };
+    res.status(200).send(nextMove);
   };
   
   /**
@@ -32,7 +35,9 @@ var play = function (req, res) {
    */
   var ping = function (req, res) {
     // Send a pong with the value of true here
-
+    res.status(200).send({
+      pong: true
+    });
   };
   
   /**
