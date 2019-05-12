@@ -49,7 +49,7 @@ var play = function (req, res) {
    */
   var notifications = function (req, res) {
     var notification = req.body;
-    console.log( notification.type, notification.message);
+    console.log(notification.type, notification.message);
     res.status(200).send();
   };
 

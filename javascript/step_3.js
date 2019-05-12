@@ -9,8 +9,6 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
-// Functions
-
 var play = function (req, res) {
   var gameInfo = req.body;
   var nextMove = {
@@ -27,34 +25,32 @@ var ping = function (req, res) {
 
 var notifications = function (req, res) {
   var notification = req.body;
-  console.log('Received notification of type ' + notification.type + ' with message: ', notification.message);
+  console.log(notification.type, notification.message);
   res.status(200).send();
 };
 
-// Routes
-
 app.route('/pokerwars.io/play').post(play);
-
-app.route('/pokerwars.io/notifications').post(notifications);
 
 app.route('/pokerwars.io/ping').get(ping);
 
-// Listen
+app.route('/pokerwars.io/notifications').post(notifications);
 
 app.listen(port);
 
 // Subscribe
 
-request.post('https://play.pokerwars.io/v1/pokerwars/subscribe', {
+// Create a POST request to the Engine /subscribe endpoint
+request.post('????', {
     json: {
-      username: 'insert here your bot username, find it at https://www.pokerwars.io/profile',
-      apiToken: 'insert here your api token, find it at https://www.pokerwars.io/token',
-      botEndpoint: 'insert here your bot ip address. i.e.: http://1.2.3.4:8090/',
+      // Add your username and apiToken here
+      ????
+      botEndpoint: 'http://1.2.3.4:8080',
       notifications: false
     }
   },
   function (error, response, body) {
-    if (!error && response.statusCode == 202) {
+    // Check the status code here
+    if (!error && response.statusCode == ????) {
       console.log('Subscribed to pokerwars.io successfully! Response: ', body);
     } else {
       console.log('Your bot did NOT subscribe succesfully! Reason: ', body);
