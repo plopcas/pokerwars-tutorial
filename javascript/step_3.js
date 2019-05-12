@@ -25,7 +25,7 @@ var play = function (req, res) {
 };
 
 /**
- * This is used by pokerwars.io when your bot subscribe to verify that is alive and responding
+ * This is used by pokerwars.io when your bot subscribes to verify that is alive and responding
  */
 var ping = function (req, res) {
   res.status(200).send({

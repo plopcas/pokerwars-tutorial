@@ -15,13 +15,17 @@ app.use(bodyParser.json());
 
 var play = function (req, res) {};
 
-// Add here functions for notifications and ping
+var ping = function (req, res) {};
+
+var notifications = function (req, res) {};
 
 // Routes
 
 app.route('/pokerwars.io/play').post(play);
 
-// Add here routes for notifications and ping
+app.route('/pokerwars.io/ping').get(ping);
+
+app.route('/pokerwars.io/notifications').post(notifications);
 
 // Listen
 
