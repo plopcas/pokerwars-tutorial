@@ -34,32 +34,28 @@
         let's focus on how to create routes.
     </p>
     <p>In Express, we can create a new route using
-        <pre>app.route()</pre>. In the code, we went ahead and created a route for the <i>play</i> action for you. This
+        <i>app.route()</i>. In the code, we went ahead and created a route for the <i>play</i> action for you. This
         is the endpoint the Engine will call during the tournament to ask you for your next action when your bot is
         playing. The endpoint itself needs to follow a convention where we have
-        <pre>/pokerwars/</pre> followed by the name of something the Engine undertands, in this case
-        <pre>play</pre>. Once that endpoint is called, our applcation will call a function named
-        <pre>play()</pre> passing the HTTP request and HTTP response objects.</p>
+        <i>/pokerwars/</i> followed by the name of something the Engine undertands, in this case
+        <i>play</i>. Once that endpoint is called, our applcation will call a function named
+        <i>play()</i> passing the HTTP request and HTTP response objects.</p>
     <pre>var play = function (req, res) {};</pre>
-    <p>For now we'll leave this
-        <pre>play</pre> function empty. In the next steps we'll see how it works.</p>
-    <p>In addition to
-        <pre>play</pre> there are another two endpoints the game requires you to implement:
+    <p>For now we'll leave this <i>play</i> function empty. In the next steps we'll see how it works.</p>
+    <p>In addition to <i>play</i> there are another two endpoints the game requires you to implement:
         <ul>
             <li>
-                <pre>ping</pre>: used by the Engine when your bot subscribes to verify that is alive and responding.</li>
+                <i>ping</i>: used by the Engine when your bot subscribes to verify that is alive and responding.</li>
             <li>
-                <pre>notifications</pre>: this one is optional, you decide if you want them when you subscribe. Your bot
+                <i>notifications</i>: this one is optional, you decide if you want them when you subscribe. Your bot
                 does not need to necessarily provide an endpoint for these, but they can give you useful hints on what
                 is happening during the tournaments. <b>Please do not use notifications in your bot logic, as they are
                     not guaranteed to always be sent. They are only informative so you are aware of what your bot is
                     doing.</b></li>
         </ul>
     </p>
-    <p>Go ahead and create similar routes and functions for
-        <pre>ping</pre> and
-        <pre>notifications</pre>
-    </p>.
+    <p>Go ahead and create similar routes and functions for <b><i>ping</i></b> and <b><i>notifications</i></b>.
+    </p>
     <p><b>HINT: </b> create ping first and notifications second for the validation to pass.</p>
 
 </div>
