@@ -24,7 +24,8 @@ var play = function (req, res) {
     var gameInfo = req.body;
 
     // Create a nextMove object and send it back with here
-
+    var nextMove = ????;
+    res.status(200).send(nextMove);
   };
   
   /**
