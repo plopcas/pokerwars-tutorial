@@ -15,6 +15,8 @@ app.use(bodyParser.json());
 
 var play = function (req, res) {};
 
+// Add here functions for ping and notifications
+
 var ping = function (req, res) {};
 
 var notifications = function (req, res) {};
@@ -22,6 +24,8 @@ var notifications = function (req, res) {};
 // Routes
 
 app.route('/pokerwars.io/play').post(play);
+
+// Add here routes for ping and notifications
 
 app.route('/pokerwars.io/ping').get(ping);
 
