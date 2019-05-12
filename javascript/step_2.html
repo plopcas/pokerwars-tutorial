@@ -61,16 +61,13 @@
         <pre>
         {
             action: 'SOME_ACTION'
-        }
-        </pre>
+        }</pre>
         There a multiple actions available, check the Pokerwars <a href="http://localhost:4200/how-to-play.html#_play"
             target="_blank">documentation</a> for more information.
     </p>
     <p>In Express, we send a response by assigning a status code and a payload directly in the middleware function like
         this.
-        <pre>
-        res.status(200).send(SOME_PAYLOAD);
-        </pre>
+        <pre>res.status(200).send(SOME_PAYLOAD);</pre>
     </p>
     <p class="exercise">Go ahead a create a response with a payload that always <b>'folds'</b>. Store the payload in a <i>var</i> called
         <b>nextMove</b>. HINT - In Javascript we can assign a JSON object directly to a <i>var</i> like this:
